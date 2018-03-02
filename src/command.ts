@@ -20,7 +20,7 @@ export class Command {
                     await this.context.reply('You are not in a voice channel');
                 }
                 break;
-            case 'disconnect':
+            case 'killbot':
                 Command.tts.clearTimeout();
                 await this.bot.client.destroy();
                 break;
@@ -34,13 +34,14 @@ export class Command {
                 if (this.bot.connection) {
                     this.bot.connection.disconnect();
                     this.bot.connection = null;
-                    global.gc();
                 }
                 break;
             case 'rejoin':
-                let channel = this.bot.connection.channel;
-                await this.bot.connection.disconnect();
-                this.bot.connection = await channel.join();
+                if (this.bot.connection != null) {
+                    let channel = this.bot.connection.channel;
+                    await this.bot.connection.disconnect();
+                    this.bot.connection = await channel.join();
+                }
                 break;
         }
     }

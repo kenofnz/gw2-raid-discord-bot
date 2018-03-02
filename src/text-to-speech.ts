@@ -19,7 +19,7 @@ export class TextToSpeech {
         const filePath = path.join(process.cwd(), folder, hash);
 
         if (!fs.existsSync(filePath)) {
-            const url = await googleTTS(text, 'en', 1);
+            const url = await googleTTS(text, 'en', 1.5);
             await download(url, folder, {
                 filename: hash,
             });

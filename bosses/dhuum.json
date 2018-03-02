@@ -16,19 +16,28 @@
       "warnTime": 10
     },
     {
-      "startTime": 210,
+      "startTime": 215,
       "interval": 80,
       "mechanicNames": [
-        "hold bombs"
+        "keep bomb"
+      ],
+      "warnTime": 8
+    },
+    {
+      "startTime": 215,
+      "interval": 80,
+      "mechanicNames": [
+        "soul suck"
       ],
       "warnTime": 5
     },
     {
-      "startTime": 210,
+      "startTime": 175,
       "interval": 80,
       "mechanicNames": [
-        "soul split"
-      ]
+        "dip soon, time out bombs"
+      ],
+      "warnTime": 5
     }
   ],
   "timeLimit": 600

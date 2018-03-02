@@ -33,7 +33,7 @@ export class MechanicsMapper {
 
     private static getPlayerNames(mech: Mechanics, playerNames: string[]) {
         if (typeof(mech.playersInvolved) === 'number') {
-            return this.padPlayerNames(mech.playersInvolved, playerNames, i => `Player ${i + 1}`);
+            return this.padPlayerNames(mech.playersInvolved, playerNames, i => `${i + 1}`);
         } else if (Array.isArray(mech.playersInvolved)) {
             return this.padPlayerNames(mech.playersInvolved.length, playerNames, i => mech.playersInvolved[i]);
         } else {
